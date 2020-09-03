@@ -3,6 +3,8 @@ This app allows you to edit Excalidraw drawings right in your Nextcloud.
 It currently does not support collaboration, but this is on the roadmap.
 This is a personal project of mine, so use at your own risk!
 
+This projects code is heavily based on [Mind Map Editor](https://github.com/ACTom/files_mindmap) - thanks!
+
 ## Dependencies
 - PHP
 - NPM
