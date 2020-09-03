@@ -25,7 +25,7 @@ make appstore
 ```
 
 This will create `build/artifacts/appstore/nextcloud-excalidraw.tar.gz`.
-Extract the contents of this file to your `apps/` folder.
+Extract the contents of this file to your `apps/` folder and ensure, that `www-data` can read them.
 Then enable the app via the web interface and run
 
 ```

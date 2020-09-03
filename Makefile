@@ -105,7 +105,7 @@ source:
 	rm -rf $(source_build_directory)
 	mkdir -p $(source_build_directory)
 	tar cvzf $(source_package_name).tar.gz \
-	--transform 's|^\.|$(app_name)/|' \
+	--transform 's|^\.|excalidraw/|' \
 	--exclude-vcs \
 	--exclude="./build" \
 	--exclude="./node_modules" \
@@ -117,7 +117,7 @@ appstore:
 	rm -rf $(appstore_build_directory)
 	mkdir -p $(appstore_build_directory)
 	tar cvzf $(appstore_package_name).tar.gz \
-	--transform 's|^\.|$(app_name)/|' \
+	--transform 's|^\.|excalidraw/|' \
 	--exclude-vcs \
 	--exclude="./build" \
 	--exclude="./tests" \
