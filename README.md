@@ -5,6 +5,8 @@ This is a personal project of mine, so use at your own risk!
 
 This projects code is heavily based on [Mind Map Editor](https://github.com/ACTom/files_mindmap) - thanks!
 
+![Screenshot](screenshot.png)
+
 ## Dependencies
 - PHP
 - NPM
