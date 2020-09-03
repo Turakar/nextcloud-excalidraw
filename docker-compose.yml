@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+
+  nextcloud_db:
+    image: mariadb
+    container_name: nextcloud_db
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    volumes:
+      - nextcloud_db:/var/lib/mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=Alpha123"
+      - "MYSQL_PASSWORD=Alpha123"
+      - "MYSQL_DATABASE=nextcloud"
+      - "MYSQL_USER=nextcloud"
+
+  nextcloud:
+    image: nextcloud
+    container_name: nextcloud
+    depends_on:
+      - nextcloud_db
+      - excalidraw_room
+    volumes:
+      - nextcloud_data:/var/www/html
+    ports:
+      - 5001:80
+    environment:
+      - "MYSQL_DATABASE=nextcloud"
+      - "MYSQL_USER=nextcloud"
+      - "MYSQL_PASSWORD=Alpha123"
+      - "MYSQL_HOST=nextcloud_db"
+
+  excalidraw_room:
+    image: excalidraw/excalidraw-room
+    container_name: excalidraw_room
+    ports:
+      - 5000:5000
+
+volumes:
+  nextcloud_db:
+  nextcloud_data:

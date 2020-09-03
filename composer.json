@@ -1,0 +1,13 @@
+{
+    "name": "turakar/excalidraw",
+    "description": "Excalidraw integration for your Nextcloud!",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "Turakar"
+        }
+    ],
+    "require": {},
+    "require-dev": {}
+}

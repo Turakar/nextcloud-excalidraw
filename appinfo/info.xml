@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>excalidraw</id>
+    <name>Excalidraw</name>
+    <summary>Excalidraw integration for your Nextcloud!</summary>
+    <description><![CDATA[This app allows you to edit Excalidraw drawings right in your Nextcloud. It currently does not support collaboration, but this is on the roadmap. This is a personal project of mine, so use at your own risk!]]></description>
+    <version>0.1.0</version>
+    <licence>agpl</licence>
+    <author mail="turakar23@gmail.com" >Turakar</author>
+    <namespace>Excalidraw</namespace>
+    <category>integration</category>
+    <category>multimedia</category>
+    <category>tools</category>
+    <bugs>https://github.com/Turakar/nextcloud-excalidraw/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="19" max-version="19"/>
+    </dependencies>
+    <repair-steps>
+        <install>
+            <step>OCA\Excalidraw\Migration\InstallStep</step>
+        </install>
+        <post-migration>
+            <step>OCA\Excalidraw\Migration\InstallStep</step>
+        </post-migration>
+        <uninstall>
+            <step>OCA\Excalidraw\Migration\UninstallStep</step>
+        </uninstall>
+    </repair-steps>
+</info>
